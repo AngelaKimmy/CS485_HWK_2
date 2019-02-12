@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{B54A8F3E-AE70-641D-6E7E-73B73B822B1C}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FirstPersonController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/FirstPersonController.cs" Line="79" Column="1" />
+      <File FileName="Assets/Scripts/Controller.cs" Line="72" Column="11" />
+      <File FileName="Assets/Scripts/Menu.cs" Line="34" Column="6" />
+      <File FileName="Assets/Scripts/BackButton.cs" Line="18" Column="35" />
+      <File FileName="Assets/Scripts/Chase.cs" Line="25" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
