@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{B54A8F3E-AE70-641D-6E7E-73B73B822B1C}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FirstPersonController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayAgain.cs">
     <Files>
-      <File FileName="Assets/Scripts/FirstPersonController.cs" Line="79" Column="1" />
+      <File FileName="Assets/Scripts/FirstPersonController.cs" Line="81" Column="38" />
       <File FileName="Assets/Scripts/Controller.cs" Line="72" Column="11" />
-      <File FileName="Assets/Scripts/Menu.cs" Line="34" Column="6" />
-      <File FileName="Assets/Scripts/BackButton.cs" Line="18" Column="35" />
-      <File FileName="Assets/Scripts/Chase.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/Menu.cs" Line="38" Column="6" />
+      <File FileName="Assets/Scripts/BackButton.cs" Line="22" Column="37" />
+      <File FileName="Assets/Scripts/Chase.cs" Line="29" Column="43" />
+      <File FileName="Assets/PlayAgain.cs" Line="26" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

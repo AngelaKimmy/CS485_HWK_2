@@ -8,6 +8,7 @@ public class FirstPersonController : MonoBehaviour
     public float jumpHeight;
     public LayerMask ground;
     public Transform feet;
+    public Transform enemies;
 
     private Vector3 direction;
     private Rigidbody rbody;
@@ -17,6 +18,9 @@ public class FirstPersonController : MonoBehaviour
     private float maxY = 60f;
     private float rotationY = 10f;
     private float rotationX = 0f;
+    private int tnt;
+    private int lives;
+    private AudioSource oof;
 
     public GameObject arrow;
     public Transform arrowSpawn;
@@ -24,10 +28,12 @@ public class FirstPersonController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 5.0f;
+        speed = 6.0f;
         jumpHeight = 3.0f;
         rbody = GetComponent<Rigidbody>();
-           
+        tnt = 10;
+        lives = 10;
+        oof = GetComponent<AudioSource>();   
     }
 
     // Update is called once per frame
@@ -62,9 +68,20 @@ public class FirstPersonController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            Fire();
-            Debug.Log("Fire1");
+            if(tnt > 0)
+            {
+                Fire();
+                Debug.Log("Fire1");
+                tnt--;
+            }
+
         }
+        if(enemies.childCount == 0)
+        {
+            Application.LoadLevel(3);
+        }
+
+
 
     }
 
@@ -76,5 +93,23 @@ public class FirstPersonController : MonoBehaviour
             arrowSpawn.rotation);
         arrow.GetComponent<Rigidbody>().velocity = arrow.transform.forward * 6;
         Destroy(arrow, 2.0f);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            if(lives > 0)
+            {
+                lives--;
+                oof.Play();
+                
+            }
+            else
+            {
+                Application.LoadLevel(2);
+            }
+
+        }
     }
 }

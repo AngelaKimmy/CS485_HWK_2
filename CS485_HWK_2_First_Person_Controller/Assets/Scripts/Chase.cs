@@ -11,7 +11,7 @@ public class Chase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 2f;
+        speed = 3f;
         offset = transform.position - target.position;
     }
 
@@ -21,4 +21,16 @@ public class Chase : MonoBehaviour
         transform.LookAt(target, Vector3.up);
         transform.position += transform.forward * speed * Time.deltaTime;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "TNT")
+        {
+            Destroy(collision.gameObject);
+            Destroy(this);
+            Destroy(gameObject);
+        }
+    }
+
+
 }
