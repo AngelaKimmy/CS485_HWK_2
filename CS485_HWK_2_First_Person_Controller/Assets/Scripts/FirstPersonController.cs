@@ -66,16 +66,7 @@ public class FirstPersonController : MonoBehaviour
             Debug.Log("isGrounded = " + isGrounded);
         }
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            if(tnt > 0)
-            {
-                Fire();
-                Debug.Log("Fire1");
-                tnt--;
-            }
-
-        }
+       
         if(enemies.childCount == 0)
         {
             Application.LoadLevel(3);
@@ -85,6 +76,19 @@ public class FirstPersonController : MonoBehaviour
 
     }
 
+    void FixedUpdate()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (tnt > 0)
+            {
+                Fire();
+                Debug.Log("Fire1");
+                tnt--;
+            }
+
+        }
+    }
     void Fire()
     {
         var bullet = (GameObject)Instantiate(
@@ -92,7 +96,7 @@ public class FirstPersonController : MonoBehaviour
             arrowSpawn.position,
             arrowSpawn.rotation);
         arrow.GetComponent<Rigidbody>().velocity = arrow.transform.forward * 6;
-        Destroy(arrow, 2.0f);
+       // Destroy(arrow, 2.0f);
     }
 
     void OnCollisionEnter(Collision collision)
